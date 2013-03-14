@@ -1,0 +1,1 @@
+if wmctrl -l | grep "$1"; then wmctrl -R "$1"; else $2; fi
