@@ -1,0 +1,188 @@
+# Control(^), Alt(!Mod2), Shift(*), Mod4 = Start(#)
+# ^!+# symbols are used for convenience for quick search shortcuts in the text
+# xbindkeys -mk to check key codes
+# "notify-send debugtext"
+# killall xbindkeys && xbindkeys
+
+# common part
+"systemctl reboot"
+	Control + Alt + Delete # ^!del
+
+"python2 ~/keys/SendToUi.py hi"
+	m:0x4 + c:35 # ^]
+    
+"nautilus"
+	Mod4 + c:26 # #e
+	 
+"~/keys/OpenWindow.sh 'IDEA' 'idea.sh'"
+	Mod4 + c:24 # #q
+
+"~/keys/OpenWindow.sh '.xbindkeysrc - emacs' 'emacs ~/.xbindkeysrc'"
+	Mod4 + 2 # #2
+
+"~/keys/OpenWindow.sh 'init - emacs' 'emacs ~/.fluxbox/init'"
+	Mod4 + 4 # #4
+
+"~/keys/OpenWindow.sh 'PyCharm ' ~/pycharm-2.6.2/bin/pycharm.sh"
+	Mod4 + c:25 # #w
+
+"~/keys/OpenWindow.sh 'PyCharm ' ~/pycharm-2.6.2/bin/pycharm.sh"
+	Mod4 + c:25 # #w    
+	 
+"killall xbindkeys && xbindkeys && notify-send 'Key mappings are reloaded'"
+	Mod4 + 1 # #1
+
+"~/keys/OpenWindow.sh '.emacs - emacs' 'emacs ~/.emacs'"
+	 Control + Mod4 + 3 # ^#3
+
+"~/keys/OpenWindow.sh 'emacs.el - emacs' 'emacs ~/Dropbox/emacs/emacs.el'"
+	 Mod4 + 3 # #3
+
+"~/keys/OpenWindow.sh 'Qalculate!' 'qalculate'"
+	 Control + F6 # ^F6
+	 
+"~/keys/OpenWindow.sh 'SpeedCrunch' 'speedcrunch'"
+	 Control + Mod4 + F6 # ^#F6
+
+"python2 ~/keys/KeyboardUtil.py switchLanguage"
+	 Alt + Shift_L # !*
+			 
+"fbrun"
+	 Alt + F2 # !f2
+	 
+"python2 ~/keys/Open.py calendar"
+	m:0x44 + c:28 # ^#t
+
+#"killall shutter && shutter -s"
+"shutter -s"
+	Print
+
+"python2 ~/keys/OpenPage.py openExecute 'http://136.136.136.7:8090/secure/CreateIssue!default.jspa'"
+	Control + Mod4 + 2 # ^#2
+	 
+"python2 ~/keys/OpenPage.py jiraTaskPrompt"
+	 Alt + Mod4 + 2 # !#2
+
+"python2 ~/keys/RemapKeys.py fireFoxAlmntWToCtrlW"
+	 Alt + c:25 # !w
+
+"python2 /home/at/keys/OpenPage.py jiraTask"
+	 Control + Alt + 2 # ^!2
+	 
+"python2 ~/keys/OpenPage.py googleMaps"
+	 F12
+
+"python2 ~/keys/OpenPage.py yandexTranslationPrompt"
+	 Alt + Mod4 + 0 # !#0
+     
+"python2 ~/keys/OpenPage.py yandexTranslation"
+	 Alt + 0 # !0
+
+"python2 ~/keys/OpenPage.py learnersDictionaryTranslation"
+	m:0x8 + c:21 # !=
+     
+"python2 ~/keys/OpenPage.py learnersDictionaryTranslationPrompt"
+	m:0x48 + c:21 # !#=
+
+"python2 ~/keys/OpenPage.py imdb"
+	Mod4 + c:31 # #i
+	 
+"python2 ~/keys/OpenPage.py imdbPrompt"
+	 Control + Mod4 + c:31 # ^#i
+	 
+"python2 ~/keys/OpenPage.py imdbGoogleSiteSearch"
+	 Control + Alt + Mod4 + c:31 # ^!#i
+	 
+"python2 ~/keys/RunSelection.py openSelection"
+	 m:0x4 + c:37 + m:0x0 + c:49 # ^`
+
+"python2 ~/keys/RunSelection.py runSelection"
+	 mod4 + grave # #`
+
+"python2 ~/keys/RunSelection.py runSelection"
+	 control + alt + grave # ^!`
+		
+"python2 ~/keys/OpenPage.py google"
+	 alt + grave	# !`
+
+"python2 ~/keys/OpenPage.py googleGroups"
+	 alt + Mod4 + grave	# !#`
+    		 
+"python2 ~/keys/Open.py fireFox"
+	Mod4 + c:41 # #f
+
+"python2 ~/keys/Emacs.py startSearch"
+	F1
+
+"python2 ~/keys/Emacs.py toInbox"
+	KP_Insert # numpad0
+
+"python2 ~/keys/Emacs.py toInboxHome"
+	 KP_End # numpad1
+
+"python2 ~/keys/Emacs.py toBookmark"
+	 KP_Subtract # numpadMinus
+
+"python2 ~/keys/Emacs.py toInboxWeek"
+	 KP_Down # numpad2
+
+"python2 ~/keys/Emacs.py toInboxMonth"
+	 KP_Next # numpad3
+
+"python2 ~/keys/Emacs.py toInboxYear"
+	 KP_Left # numpad4
+
+"python2 ~/keys/Emacs.py toPlan"
+	 KP_Enter # numpad enter
+
+"firefox https://mail.google.com/mail/?shva=1#compose"
+	 Control + F1 # ^f1
+	
+"firefox https://mail.google.com/mail"
+	 Alt + F1
+		 
+"/usr/bin/amixer -q sset Master 2+"
+	 Control + Shift + Up # ^*up
+	 
+"/usr/bin/amixer -q sset Master 2-"
+	 Control + Shift + Down # ^*down
+		 
+"disper -s"
+		Control + F8 # ^f8
+	 
+"disper -S"
+		Alt + F8 # !f8
+	 
+"python2 ~/keys/KeyboardUtil.py setDefaultLanguage; xterm"
+	Mod4 + c:38 # #a
+
+"python2 ~/keys/KeyboardUtil.py setDefaultLanguage; gnome-terminal"
+	m:0x48 + c:27 # !#r
+    
+#"~/keys/OpenWindow.sh 'at@at-arch-laptop' 'gnome-terminal'"
+"python2 ~/keys/Open.py gnomeTerminal"
+	 Mod4 + c:27 # #r
+    
+"python2 ~/keys/CopyURLFirefox.py"
+    m:0x08 + c:58 # !m
+    
+"python2 ~/keys/SendToUi.py isoDate"
+    Control + Mod4 + Mod2 + KP_Home # ^#numpad7
+
+"i3lock -c 000000"
+    Mod4 + Escape # #esc
+
+"python2 ~/keys/SendToUi.py newTask"
+	m:0x44 + c:24 # ^#q
+
+"python2 ~/keys/SendToUi.py sendKeyAltSpace"
+	Super_L # #
+
+"python2 ~/keys/Mixer.py volumeUp"
+	XF86AudioRaiseVolume
+    
+"python2 ~/keys/Mixer.py volumeDown"
+	XF86AudioLowerVolume
+    
+"finish"
+	Control + Alt + Shift + Mod4 + 3 # ^!*#3
