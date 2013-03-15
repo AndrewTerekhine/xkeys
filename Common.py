@@ -16,7 +16,7 @@ SECOND_LANGUAGE = "ru"
 def getPid(processName):
     pid = os.popen("pidof " + processName).read().rstrip()
     return pid
-1
+
 def openProcess(processName, title, message, argument):
     if getPid(processName) == "":
         command = processName + " " + argument
