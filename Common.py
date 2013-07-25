@@ -6,6 +6,7 @@ import Message
 NAME = "Andrew"
 EMACS_TITLE = " - emacs - "
 FIREFOX_TITLE = "Firefox"
+INTELLIJ_IDEA_TITLE = "IntelliJ IDEA"
 WWW_PREFIX = "www."
 USER_FOLDER_PREFIX = "~"
 HTTP_PREFIX = "http://"
