@@ -12,6 +12,9 @@ import os
 import sys
 import tkSimpleDialog
 import string
+import time
+import Common
+import SendToUi
 import SystemUtil
 import Message
 
@@ -20,11 +23,12 @@ if __name__ == "__main__":
         PythonCall.PythonCall(sys.argv).execute()
 
 WORD_MARK = "word_mark"
-SITE_SEARCH_JIRA = "http://136.136.136.7:8090/browse/" + WORD_MARK
+SITE_SEARCH_JIRA = "http://172.16.0.7:8090/browse/" + WORD_MARK
 SITE_SEARCH_JIRA_DESCRIPTION = "Open Jira task"
 SITE_SEARCH_JIRA_HINT = "Jira task ID:"
 SITE_SEARCH_GOOGLE_MAPS = "http://maps.google.com/maps?f=q&hl=en&geocode=&time=&date=&ttype=&q=" + WORD_MARK + "&ie=UTF8&z=10&iwloc=addr&om=1"
 SITE_SEARCH_GOOGLE_MAPS_DESCRIPTION = "Searching on Google Maps"
+SITE_GOOGLE_MAIL = "https://mail.google.com/mail"
 SITE_SEARCH_YANDEX_TRANSLATION = "http://lingvo.yandex.ru/en?text=" + WORD_MARK + "&st_translate=1"
 SITE_SEARCH_YANDEX_TRANSLATION_DESCRIPTION = "Yandex translation"
 SITE_SEARCH_LEARNERS_DICTIONARY_TRANSLATION = "http://www.learnersdictionary.com/search/" + WORD_MARK
@@ -63,6 +67,13 @@ def jiraTask():
 
 def googleMaps():
     open(SITE_SEARCH_GOOGLE_MAPS_DESCRIPTION, SITE_SEARCH_GOOGLE_MAPS)
+
+def googleMail():
+    if Common.isAtiveTitle(Common.INTELLIJ_IDEA_TITLE):
+        time.sleep(0.05) # important it won't work without a timeout
+        SendToUi.sendKey("alt+F3")
+    else:
+        openExecute(SITE_GOOGLE_MAIL)
 
 def yandexTranslation():
     open(SITE_SEARCH_YANDEX_TRANSLATION_DESCRIPTION, SITE_SEARCH_YANDEX_TRANSLATION)
