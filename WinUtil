@@ -1,3 +1,6 @@
+LOCALE_ID_US := 0x4090409
+LOCALE_ID_RU := 0x4190419
+
 switchLanguageEnglish()
 {
 	ControlGetFocus,ctl,A
